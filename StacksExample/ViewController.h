@@ -6,10 +6,9 @@
 //  Copyright (c) 2015 knotch. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "StacksViewController.h"
 
-@interface ViewController : UIViewController
-
+@interface ViewController : StacksViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @end
 

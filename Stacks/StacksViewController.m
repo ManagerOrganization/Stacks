@@ -9,7 +9,6 @@
 #define animationTime 0.2f
 #import "StacksViewController.h"
 #import "UIView+Snapshot.h"
-#import "UIViewAdditions.h"
 
 @interface StacksViewController () {
     UIPanGestureRecognizer *_panGesture;
@@ -81,7 +80,10 @@
             [self.view addSubview:_currentSnapshot];
             _currentPage--;
             [self scrollToCurrentPage];
-            _collectionViewStacks.frame = CGRectMake(-1 * _collectionViewStacks.width, 0, _collectionViewStacks.width, _collectionViewStacks.height);
+            _collectionViewStacks.frame = CGRectMake(-1 * _collectionViewStacks.frame.size.width,
+                                                     0,
+                                                     _collectionViewStacks.frame.size.width,
+                                                     _collectionViewStacks.frame.size.height);
             [self.view bringSubviewToFront:_collectionViewStacks];
         }
     }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72B3F2A81A93E797003E8804 /* UIColor+RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B3F2A51A93E797003E8804 /* UIColor+RandomColor.m */; };
+		72B3F2A91A93E797003E8804 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B3F2A71A93E797003E8804 /* UIView+Additions.m */; };
+		72B3F2AC1A93E7D3003E8804 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B3F2AB1A93E7D3003E8804 /* CollectionViewCell.m */; };
 		72C684D01A93DFDC00F50342 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C684CF1A93DFDC00F50342 /* main.m */; };
 		72C684D31A93DFDC00F50342 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C684D21A93DFDC00F50342 /* AppDelegate.m */; };
 		72C684D61A93DFDC00F50342 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C684D51A93DFDC00F50342 /* ViewController.m */; };
@@ -27,6 +30,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		72B3F2A41A93E797003E8804 /* UIColor+RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RandomColor.h"; sourceTree = "<group>"; };
+		72B3F2A51A93E797003E8804 /* UIColor+RandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RandomColor.m"; sourceTree = "<group>"; };
+		72B3F2A61A93E797003E8804 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		72B3F2A71A93E797003E8804 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		72B3F2AA1A93E7D3003E8804 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		72B3F2AB1A93E7D3003E8804 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		72C684CA1A93DFDC00F50342 /* StacksExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StacksExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C684CE1A93DFDC00F50342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72C684CF1A93DFDC00F50342 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,6 +71,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72B3F2A31A93E797003E8804 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				72B3F2A41A93E797003E8804 /* UIColor+RandomColor.h */,
+				72B3F2A51A93E797003E8804 /* UIColor+RandomColor.m */,
+				72B3F2A61A93E797003E8804 /* UIView+Additions.h */,
+				72B3F2A71A93E797003E8804 /* UIView+Additions.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		72C684C11A93DFDC00F50342 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +108,8 @@
 				72C684D21A93DFDC00F50342 /* AppDelegate.m */,
 				72C684D41A93DFDC00F50342 /* ViewController.h */,
 				72C684D51A93DFDC00F50342 /* ViewController.m */,
+				72B3F2AA1A93E7D3003E8804 /* CollectionViewCell.h */,
+				72B3F2AB1A93E7D3003E8804 /* CollectionViewCell.m */,
 				72C684DA1A93DFDC00F50342 /* Images.xcassets */,
 				72C684CD1A93DFDC00F50342 /* Supporting Files */,
 			);
@@ -97,6 +119,7 @@
 		72C684CD1A93DFDC00F50342 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				72B3F2A31A93E797003E8804 /* Categories */,
 				72C684CE1A93DFDC00F50342 /* Info.plist */,
 				72C684CF1A93DFDC00F50342 /* main.m */,
 			);
@@ -233,6 +256,9 @@
 				72C684FF1A93E6D800F50342 /* StacksViewController.m in Sources */,
 				72C685001A93E6D800F50342 /* UIView+Snapshot.m in Sources */,
 				72C684D31A93DFDC00F50342 /* AppDelegate.m in Sources */,
+				72B3F2A81A93E797003E8804 /* UIColor+RandomColor.m in Sources */,
+				72B3F2A91A93E797003E8804 /* UIView+Additions.m in Sources */,
+				72B3F2AC1A93E7D3003E8804 /* CollectionViewCell.m in Sources */,
 				72C684D01A93DFDC00F50342 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

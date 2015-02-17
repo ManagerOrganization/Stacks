@@ -7,7 +7,6 @@
 //
 
 #import "UIView+Snapshot.h"
-#import "UIViewAdditions.h"
 
 @implementation UIView (Snapshot)
 
@@ -19,9 +18,9 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     CGContextSaveGState(context);
-    CGContextTranslateCTM(context, self.centerX, self.centerY);
+    CGContextTranslateCTM(context, self.center.x, self.center.y);
     CGContextConcatCTM(context, self.transform);
-    CGContextTranslateCTM(context, -1 * self.width * self.layer.anchorPoint.x, -1 * self.height * self.layer.anchorPoint.y);
+    CGContextTranslateCTM(context, -1 * self.frame.size.width * self.layer.anchorPoint.x, -1 * self.frame.size.height * self.layer.anchorPoint.y);
     if ([self respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)]) {
         [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
     } else {
