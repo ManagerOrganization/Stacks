@@ -12,6 +12,8 @@
 		72C684D61A93DFDC00F50342 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C684D51A93DFDC00F50342 /* ViewController.m */; };
 		72C684DB1A93DFDC00F50342 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C684DA1A93DFDC00F50342 /* Images.xcassets */; };
 		72C684EA1A93DFDC00F50342 /* StacksExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C684E91A93DFDC00F50342 /* StacksExampleTests.m */; };
+		72C684FF1A93E6D800F50342 /* StacksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C684FC1A93E6D800F50342 /* StacksViewController.m */; };
+		72C685001A93E6D800F50342 /* UIView+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C684FE1A93E6D800F50342 /* UIView+Snapshot.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,10 @@
 		72C684E31A93DFDC00F50342 /* StacksExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StacksExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C684E81A93DFDC00F50342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72C684E91A93DFDC00F50342 /* StacksExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StacksExampleTests.m; sourceTree = "<group>"; };
+		72C684FB1A93E6D800F50342 /* StacksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StacksViewController.h; sourceTree = "<group>"; };
+		72C684FC1A93E6D800F50342 /* StacksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StacksViewController.m; sourceTree = "<group>"; };
+		72C684FD1A93E6D800F50342 /* UIView+Snapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Snapshot.h"; sourceTree = "<group>"; };
+		72C684FE1A93E6D800F50342 /* UIView+Snapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Snapshot.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,7 @@
 		72C684C11A93DFDC00F50342 = {
 			isa = PBXGroup;
 			children = (
+				72C684FA1A93E6D800F50342 /* Stacks */,
 				72C684CC1A93DFDC00F50342 /* StacksExample */,
 				72C684E61A93DFDC00F50342 /* StacksExampleTests */,
 				72C684CB1A93DFDC00F50342 /* Products */,
@@ -111,6 +118,17 @@
 				72C684E81A93DFDC00F50342 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		72C684FA1A93E6D800F50342 /* Stacks */ = {
+			isa = PBXGroup;
+			children = (
+				72C684FB1A93E6D800F50342 /* StacksViewController.h */,
+				72C684FC1A93E6D800F50342 /* StacksViewController.m */,
+				72C684FD1A93E6D800F50342 /* UIView+Snapshot.h */,
+				72C684FE1A93E6D800F50342 /* UIView+Snapshot.m */,
+			);
+			path = Stacks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +230,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				72C684D61A93DFDC00F50342 /* ViewController.m in Sources */,
+				72C684FF1A93E6D800F50342 /* StacksViewController.m in Sources */,
+				72C685001A93E6D800F50342 /* UIView+Snapshot.m in Sources */,
 				72C684D31A93DFDC00F50342 /* AppDelegate.m in Sources */,
 				72C684D01A93DFDC00F50342 /* main.m in Sources */,
 			);
