@@ -55,8 +55,9 @@
         return NO;
     }
     if (abs(translation.x) + 5.0f > abs(translation.y)) {
+        //Do not let a swipe happen out of bounds
         if ((translation.x < 0 && _currentPage >= _arrayStacks.count + _arrayOffset - 1)
-            || (translation.x > 0 && _currentPage < 1)){ //Do not let a swipe happen out of bounds
+            || (translation.x > 0 && _currentPage < 1)){
             return NO;
         }
         initialX = translation.x;

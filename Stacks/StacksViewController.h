@@ -16,9 +16,20 @@ typedef enum {
 
 @interface StacksViewController : UIViewController <UIGestureRecognizerDelegate>
 
+/***** Required *****/
+// Set the array and the collectionview
+// in order for Stacks to be useful
 @property (nonatomic, strong) NSMutableArray *arrayStacks;
 @property (nonatomic, strong) UICollectionView *collectionViewStacks;
-@property (nonatomic) NSInteger arrayOffset, currentPage;
+
+/***** Optional *****/
+// Set this number if the number of items
+// is different than the array count
+@property (nonatomic) NSInteger arrayOffset;
+
+// You can access the current index of the collectionview
+@property (nonatomic) NSInteger currentPage;
+// You can disable swiping if need be
 @property (nonatomic) BOOL swipeable;
 
 
