@@ -55,7 +55,7 @@
         return NO;
     }
     if (abs(translation.x) + 5.0f > abs(translation.y)) {
-        if ((translation.x < 0 && _currentPage >= _arrayStacks.count)
+        if ((translation.x < 0 && _currentPage >= _arrayStacks.count + _arrayOffset - 1)
             || (translation.x > 0 && _currentPage < 1)){ //Do not let a swipe happen out of bounds
             return NO;
         }
@@ -211,7 +211,7 @@
     }
 }
 -(void)scrollToCurrentPage{
-    if(_currentPage >= 0 && _currentPage <= _arrayStacks.count){
+    if(_currentPage >= 0 && _currentPage <= _arrayStacks.count + _arrayOffset - 1){
         [_collectionViewStacks scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:_currentPage inSection:0]
                                       atScrollPosition:UICollectionViewScrollPositionNone animated:FALSE];
     }
