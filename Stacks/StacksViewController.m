@@ -29,6 +29,8 @@
     if (self) {
         _arrayOffset = 0;
         _swipeable = TRUE;
+        navigated = FALSE;
+        _currentPage = initialX = initialVelocity = 0;
     }
     return self;
 }
@@ -40,14 +42,9 @@
     [self.view addGestureRecognizer:_panGesture];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    navigated = FALSE;
-    _currentPage = initialX = initialVelocity = 0;
-}
-
 #pragma mark - Gesture Holder methods
-// NOTE: gestureRecognizerShouldBegin should only reside in this uiviewcontroller
+/***** IMPORTANT *****/
+// gestureRecognizerShouldBegin should only reside in this uiviewcontroller
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer {
     CGPoint translation = [gestureRecognizer translationInView:self.view];
     _scrollDirection = ScrollDirectionUnknown;
