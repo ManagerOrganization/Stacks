@@ -16,6 +16,7 @@
 @interface ViewController ()
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *colors;
+@property (nonatomic, strong) NSArray *images;
 @end
 
 @implementation ViewController
@@ -33,6 +34,7 @@
         UIColor *randomColor = [UIColor randomColor];
         [_colors addObject:randomColor];
     }
+    _images = @[@"penguin", @"panda", @"quokka"];
 }
 
 - (void)initUI {
@@ -54,7 +56,6 @@
     _collectionView.showsHorizontalScrollIndicator = _collectionView.showsVerticalScrollIndicator = FALSE;
     _collectionView.backgroundColor = [UIColor whiteColor];
     _collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"No Data"];
     [_collectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:[CollectionViewCell reuseIdentifier]];
     _collectionView.pagingEnabled = TRUE;
     _collectionView.scrollEnabled = FALSE;
@@ -67,19 +68,23 @@
 
 #pragma mark - UICollectionView Methods
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row < _colors.count) {
-        CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[CollectionViewCell reuseIdentifier] forIndexPath:indexPath];
-        NSInteger index = indexPath.row;
+    CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[CollectionViewCell reuseIdentifier] forIndexPath:indexPath];
+    cell.contentView.backgroundColor = [UIColor clearColor];
+    NSInteger index = indexPath.row;
+    if (index < _colors.count) {
         UIColor *color = [_colors objectAtIndex:index];
-        cell.contentView.backgroundColor = color;
-        cell.label.text = [NSString stringWithFormat:@"%ld", index];
+        UIImage *image = [UIImage imageNamed:[_images objectAtIndex:index]];
+        cell.label.backgroundColor = color;
+        cell.label.text = [NSString stringWithFormat:@"Index %ld", index];
+        cell.imageView.image = image;
+    }
+    else { // Offset cells - for extra data that is not in the array
+        cell.label.backgroundColor = [UIColor randomColor];
+        cell.label.text = [NSString stringWithFormat:@"Offset %ld", index];
+        cell.imageView.image = nil;
         return cell;
     }
-    else {
-        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"No Data" forIndexPath:indexPath];
-        cell.backgroundColor = [UIColor randomColor];
-        return cell;
-    }
+   return cell;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
