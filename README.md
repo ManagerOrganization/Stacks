@@ -23,9 +23,9 @@ This project assumes the following:
 
 
 ##Extras 
-arrayOffset: If you are showing items in addition to the ones in the array, use this integer.
-NSInteger currentPage: If you want to find out which index/page the collectionView is on, use this integer.
-BOOL swipeable: If you want to disable swiping all together, use this boolean.
+- arrayOffset: If you are showing items in addition to the ones in the array, use this integer.
+- NSInteger currentPage: If you want to find out which index/page the collectionView is on, use this integer.
+- BOOL swipeable: If you want to disable swiping all together, use this boolean.
 
 ##License
 Copyright © 2014, 2015 Knotch, Inc.
