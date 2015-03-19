@@ -10,6 +10,7 @@ Stacks is a preview-able card view. As you're scrolling through, you are able to
 
 ##Assumptions 
 (If you run into any problems, first check the following list)
+
 This project assumes the following:
 - You are using a UICollectionView.
 - The UICollectionViewCell takes up the whole screen.
@@ -18,13 +19,13 @@ This project assumes the following:
 ##How
 - Drag and drop the 'Stacks' folder into your project
 - In the UIViewController that houses the UICollectionView, #import "StacksViewController.h" and change the base class from 'UIViewController' to 'StacksViewController'
-- Point your array and collectionview to self.arrayStacks and self.collectionViewStacks = _collectionView respectively.
+- Point your array and collectionview to self.arrayStacks and self.collectionViewStacks respectively.
 - Voila, you're all set.
 
 
-##Extras 
-- arrayOffset: If you are showing items in addition to the ones in the array, use this integer.
-- NSInteger currentPage: If you want to find out which index/page the collectionView is on, use this integer.
+##Extra Variables 
+- arrayOffset: If you are showing items in addition to the ones in the array, set this variable to the extra item count.
+- NSInteger currentPage: If you want to find out which index/page the collectionView is on, use this variable.
 - BOOL swipeable: If you want to disable swiping all together, use this boolean.
 
 ##License
