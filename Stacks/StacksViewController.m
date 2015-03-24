@@ -77,6 +77,7 @@
     }
     return NO;
 }
+// Determines the direction of the pan gesture
 - (CGFloat)determineScrollDirection:(CGFloat)translation{
     CGFloat diffX = translation - initialX;
     if (diffX < 0.0f && translation != 0.0f) {
@@ -145,7 +146,7 @@
                     break;
                 }
                 case ScrollDirectionPrev:{
-                    //Handle as Previous
+                    //Handle as Backward
                     if (!navigated) {
                         navigated = TRUE;
                     }
@@ -170,7 +171,8 @@
         }
         case UIGestureRecognizerStateEnded: {
             if (_scrollDirection == ScrollDirectionNext) {
-                if (_currentSnapshot.frame.origin.x + _currentSnapshot.frame.size.width > self.view.frame.size.width / 2 && initialVelocity < 300) {  // Reverse everything!
+                if (_currentSnapshot.frame.origin.x + _currentSnapshot.frame.size.width
+                    > self.view.frame.size.width / 2 && initialVelocity < 300) {  // Reverse everything!
                     [UIView animateWithDuration:animationTime animations:^{
                         CGRect newRect = CGRectMake(0, 0, boundsW, boundsH);
                         [_currentSnapshot setFrame:newRect];
